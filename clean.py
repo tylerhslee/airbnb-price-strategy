@@ -25,13 +25,14 @@ if __name__ == '__main__':
     data_reader = DataReader('./data/listings.csv')
 
     try:
-        data_reader.filter_columns('id', 'description', 'host_since', 'host_is_superhost',
-                'host_listings_count', 'host_verifications', 'host_has_profile_pic',
-                'host_identity_verified', 'neighbourhood_cleansed', 'zipcode',
-                'property_type', 'room_type', 'accommodates', 'bathrooms', 'bedrooms',
-                'beds', 'bed_type', 'amenities', 'price', 'guests_included', 'extra_people',
-                'minimum_nights', 'number_of_reviews', 'review_scores_rating', 'instant_bookable',
-                'reviews_per_month')
+        data_reader.filter_columns(
+            'id', 'description', 'host_since', 'host_is_superhost',
+            'host_listings_count', 'host_verifications', 'host_has_profile_pic',
+            'host_identity_verified', 'neighbourhood_cleansed', 'zipcode',
+            'property_type', 'room_type', 'accommodates', 'bathrooms', 'bedrooms',
+            'beds', 'bed_type', 'amenities', 'price', 'guests_included', 'extra_people',
+            'minimum_nights', 'number_of_reviews', 'review_scores_rating', 'instant_bookable',
+            'reviews_per_month')
 
         output = './data/listings_cleaned.csv'
         _.info('Writing to %s' % output)
